@@ -1,14 +1,15 @@
-const express = require("express");
+const express = require("express")
 const router = express.Router();
 const { verifyToken } = require("../Middleware/AuthMiddleware");
-const { addProduct, getProducts , deleteProduct , updateProduct} = require("../Controllers/ProductController");
+const { addProduct, getProducts , getProductById , deleteProduct , updateProduct} = require("../Controllers/ProductController");
 
 // This All Routes for admin 
 // Add new product
-router.post("/add", verifyToken , addProduct);
+router.get("/add",verifyToken,addProduct);
 
 // Get all products
-router.post("/", verifyToken, getProducts);
+router.get("/", getProducts);
+router.get("/:id",getProductById);
 router.delete("/delete/:id",verifyToken , deleteProduct);
 router.put("/update/:id" , verifyToken , updateProduct);
 
