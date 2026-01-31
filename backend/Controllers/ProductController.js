@@ -21,7 +21,7 @@ const getProducts = async (req, res) => {
       maxPrice,
       sort,
       page = 1,
-      limit = 10,
+      limit,
     } = req.query;
 
     let query = {};

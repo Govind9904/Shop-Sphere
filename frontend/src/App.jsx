@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./pages/Profile";
 import ProductDetails from "./pages/ProductDetails";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
         </Routes>
       </BrowserRouter>
     </>

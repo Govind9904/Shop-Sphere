@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="card h-100 border-0 shadow-sm product-card" 
                     style={{cursor : "pointer"}}    
-                    onClick={() => navigate(`/product/${product._id}`)}
+                    onClick={() => navigate(`/product/${product.category}`)}
     >
       <img
         src={product.images?.[0]}
@@ -27,9 +31,9 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="card-footer bg-white border-0">
-        <Link to={`/product/${product._id}`} className="btn btn-primary w-100 btn-sm">
+        {/* <Link to={`/product/${product._id}`} className="btn btn-primary w-100 btn-sm">
           View Details
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

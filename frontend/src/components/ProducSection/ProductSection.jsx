@@ -10,7 +10,7 @@ const ProductSection = ({ title, category }) => {
     const fetchProducts = async () => {
       try {
        await axios.get(
-          `http://127.0.0.1:2000/api/product?category=${category}`
+          `http://127.0.0.1:2000/api/product?category=${category}&limit=5`
         ).then((res)=>{
             setProducts(res.data.products)
         }).catch((err)=>{

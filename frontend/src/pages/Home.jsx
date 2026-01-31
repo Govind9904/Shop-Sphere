@@ -173,7 +173,7 @@ const Home = () => {
 
       <ProductSection title="Mobiles to Checkout" category="Mobiles" />
       <ProductSection title="Top Selection" category="Fashion" />
-      <ProductSection title="Audio & Video Essentials" category="Electronics" />
+      <ProductSection title="Audio & Video Essentials" category="Audio%20%26%20Video%20Essentials" />
       <ProductSection title="Jewellery for You" category="Jewellery" />
       <ProductSection title="Furniture Deals" category="Furniture" />
       <ProductSection title="Top Deals on TV & Appliances" category="Appliances" />
